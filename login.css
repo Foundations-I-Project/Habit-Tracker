@@ -18,9 +18,10 @@ header, h1, h3, a {
     justify-content: space-between;
     align-content: space-between;
     align-items: var(--shadow);
+    margin-right: 1rem;
 
     background-color: var(--color3);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    
 }
 
