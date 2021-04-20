@@ -1,5 +1,5 @@
 import { addHabbit } from '..local-storage.utils/local';
-import { renderHabit, renderLi } from '../local-storage.utils';
+import { renderHabit, renderLi } from '../local-storage/local-storage.utils';
 
 const habitForm = document.querySelector('form');
 habitForm.addEventListener('submit', (e) => {
