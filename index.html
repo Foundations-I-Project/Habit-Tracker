@@ -5,30 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <<<<<<< HEAD <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href=>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css">
 
 
-        <title>Login Page</title>
+    <title>Login Page</title>
 </head>
 
+<header>
+    <h1> Login! </h1>
+    <h3>
+        <a href="../index.html">about us</a>
+        <a href="../new-habit/index.html">new habit</a>
+        <a href="../user-dashboard/index.html">user dashboard</a>
+        <a href="../results/index.html">results</a>
+    </h3>
+</header>
+
 <body>
-    <header>
-        <h1> Login! </h1>
-    </header>
     <main>
         <section class="main-section">
             <form id="form">
                 <label>
                     Username:
-                    <input type="text" name="username">
+                    <input class="username" type="text" name="username"><br>
                 </label>
                 <label>
                     Password:
-                    <input type="text" name="password">
+                    <input class="password" type="text" name="password">
                 </label>
-                <button id="log-in">Log In</button>
+                <button class="log-in" id="log-in">Log In</button>
+
+                <p></p>
+
+                <!-- this is about us
+                <a href="./home/index.html">this links to the home page -->
             </form>
             <div id="error-div">
                 <span id="error-span"></span>
@@ -37,27 +49,9 @@
 
         </section>
     </main>
-    this is about us
-    <a href="./home/index.html">this links to the home page
-    </a>
 
     <footer>
-
+        <script type="module" src="./login.js"></script>
     </footer>
-    <script type="module" src="./app.js"></script>
-    =======
-    <link rel="stylesheet" href="./loggin.css">
-    <title>Loggin</title>
-    </head>
-
-    <body>
-        <a href="../index.html">about us</a>
-        <a href="../new-habit/index.html">new habit</a>
-        <a href="../user-dashboard/index.html">user dashboard</a>
-        <a href="../results/index.html">results</a>
-        <p>this is our loggin page </p>
-        >>>>>>> 1f541a81d9d99d37bdac29dd97a21a888e037d9e
-    </body>
-    <script type="module" src="./loggin.js"></script>
 
 </html>
