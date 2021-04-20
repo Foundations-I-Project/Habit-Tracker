@@ -26,6 +26,7 @@ form.addEventListener('submit', (e) => {
         } else {
             errorSpan.textContent = 'Wrong username or password! Thou shalt not log in';
 
-        }
+        }// this is to be able to merge this crap
+
     }
 });
