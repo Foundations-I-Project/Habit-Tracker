@@ -16,6 +16,8 @@ background-color: var(--color2);
 header, h1, h3, a {
     display: flex;
     justify-content: space-between;
+    align-content: space-between;
+    align-items: var(--shadow);
 
     background-color: var(--color3);
     height: var(--header-height);
