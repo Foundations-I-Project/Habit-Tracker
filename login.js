@@ -1,4 +1,4 @@
-import { } from "./local-storage.utils.js";
+import { } from "./local-storage.js";
 
 const errorSpan = document.querySelector('#error-spam');
 const button = document.querySelector('#sign-up-button');
@@ -17,10 +17,9 @@ form.addEventListener('submit', (e) => {
     const username = formData.get('username');
     const password = formData.get('password');
 
-    if doesUserExist(username)) {
+    if (doesUserExist(username)) {
         if (usernamePasswordMatch(username, password)) {
-            "Password": Unknown word.
-                setLoggedIn(username);
+            setLoggedIn(username);
             window.location = './';
             //if they dont match
         } else {
