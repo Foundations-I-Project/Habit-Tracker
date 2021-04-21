@@ -9,7 +9,7 @@ export function createUser(username, password) {
         password,
         habits: []
     };
-    updatedUser(user);
+    updateUser(user);
 }
 
 export function getUser() {
@@ -37,12 +37,12 @@ export function usernameAndPasswordMatch(username, password) {
 }
 
 export function login(username) {
-    localStorage.setItem(LOGGED_IN, username);
+    localStorage.setItem(LOGGEDIN, username);
 
 }
 
 export function logout() {
-    localStorage.setItem(LOGGED_IN, '');
+    localStorage.setItem(LOGGEDIN, '');
 }
 
 export function loginAndRedirect(username) {
@@ -62,8 +62,8 @@ export function addHabit(habit) {
     updateUser(user);
 }
 
-export function completehabit(message) {
-    const user = getuser();
+export function completeHabit(message) {
+    const user = getUser();
 
     const matchingHabit = user.habit.find((habit) => message === habit.habit);
 
