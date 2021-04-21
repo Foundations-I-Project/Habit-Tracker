@@ -1,6 +1,8 @@
 const USER = 'USER';
 const LOGGEDIN = 'LOGGED_IN';
 
+
+
 export function createUser(username, password) {
     const user = {
         username,
@@ -16,10 +18,7 @@ export function getUser() {
     return user;
 }
 
-export function updateUser(user) {
-    const stringUser = JSON.stringify(user);
-    localStorage.setItem(USER, stringUser);
-}
+
 
 export function userExists(username) {
     const userInLocalStorage = getUser();
