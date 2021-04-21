@@ -1,4 +1,4 @@
-import { loginAndRedirect, createUser } from "./local-storage/localStorageUtils.js";
+import { loginAndRedirect, createUser, userExists } from "./local-storage/localStorageUtils.js";
 
 const errorSpan = document.querySelector('#error-span');
 const button = document.querySelector('#log-in');
@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
     const username = formData.get('username');
     const password = formData.get('password');
 
-    if (doesUserExist(username)) {
+    if (userExists(username)) {
         if (usernamePasswordMatch(username, password)) {
             loginAndRedirect(username);
         } else {

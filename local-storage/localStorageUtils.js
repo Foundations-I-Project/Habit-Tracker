@@ -7,7 +7,7 @@ export function createUser(username, password) {
         password,
         habits: []
     };
-    updatedUser(user);
+    updateUser(user);
 }
 
 export function getUser() {
