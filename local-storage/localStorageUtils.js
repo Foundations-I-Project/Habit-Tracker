@@ -63,8 +63,8 @@ export function addHabit(habit) {
     updateUser(user);
 }
 
-export function completehabit(message) {
-    const user = getuser();
+export function completeHabit(message) {
+    const user = getUser();
 
     const matchingHabit = user.habit.find((habit) => message === habit.habit);
 
