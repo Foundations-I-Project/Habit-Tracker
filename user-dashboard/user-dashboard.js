@@ -1,4 +1,4 @@
-import { addHabbit } from '..local-storage.utils/local';
+import { addHabit } from '..local-storage.utils/local';
 import { renderHabit, renderLi } from '../local-storage/local-storage.utils';
 
 const habitForm = document.querySelector('form');
