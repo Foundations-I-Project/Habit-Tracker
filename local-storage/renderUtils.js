@@ -3,7 +3,7 @@ import { getUser, completeHabit } from './localStorageUtils.js';
 
 export function renderLi(habit) {
     const li = document.createElement('li');
-    li.textContent = habit.habit;
+    li.textContent = habit;
 
     li.addEventListener('click', () => {
         completeHabit(habit.habit);
@@ -20,8 +20,9 @@ export function renderHabit() {
 
     const ul = document.getElementById('HabitList');
     ul.textContent = '';
-    user.habit.forEach(habit => {
-        const li = renderLi(habit);
+    user.habits.forEach(habit => {
+        const li = renderLi(habit.habit);
+
 
 
         ul.append(li);
