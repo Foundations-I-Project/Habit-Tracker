@@ -38,12 +38,12 @@ export function usernameAndPasswordMatch(username, password) {
 }
 
 export function login(username) {
-    localStorage.setItem(LOGGED_IN, username);
+    localStorage.setItem(LOGGEDIN, username);
 
 }
 
 export function logout() {
-    localStorage.setItem(LOGGED_IN, '');
+    localStorage.setItem(LOGGEDIN, '');
 }
 
 export function loginAndRedirect(username) {
