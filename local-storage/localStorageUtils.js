@@ -58,15 +58,15 @@ export function addHabit(habit) {
     };
 
     const user = getUser();
-    user.habit.push(newHabit);
+    user.habits.push(newHabit);
 
     updateUser(user);
 }
 
 export function completeHabit(message) {
     const user = getUser();
-
-    const matchingHabit = user.habit.find((habit) => message === habit.habit);
+    console.log(user.habits);
+    const matchingHabit = user.habits.find((habit) => message === habits.habit);
 
     matchingHabit.completed = true;
 

@@ -6,10 +6,10 @@ habitForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(habitForm);
-    const habit = habitData.get('habit');
-    addHabbit(habit);
+    const habit = formData.get('new-habit');
+    addHabit(habit);
 
-    renderLi(habit);
+    renderLi(habit.habit);
     renderHabit();
 
     habitForm.reset();
@@ -17,4 +17,3 @@ habitForm.addEventListener('submit', (e) => {
 });
 
 renderHabit();
-addHabit();
