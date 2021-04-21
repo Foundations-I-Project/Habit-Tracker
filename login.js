@@ -1,4 +1,4 @@
-import { } from "./local-storage.js";
+import { createUser } from "./local-storage.js";
 
 const errorSpan = document.querySelector('#error-spam');
 const button = document.querySelector('#sign-up-button');
