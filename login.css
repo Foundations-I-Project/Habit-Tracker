@@ -1,5 +1,5 @@
 
-
+/* 
 body {
 --header-height: 80px;
 --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
@@ -23,5 +23,36 @@ header, h1, h3, a {
     background-color: var(--color3);
     height: var(--header-height);
     
-}
+} */
+
+body {
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --gutter: 30px;
+    --footer-height: 25px;
+    
+    font-family: 'Merienda One', cursive;
+    background-color: palegoldenrod;
+    background: url('./assets/cherry-blossom.gif') no-repeat center fixed;     
+    background-size: cover;
+
+    }
+    
+    
+    
+    
+    header, h1, h3, a {
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-right: 1rem;
+        background-color: var(--color3);
+        height: var(--header-height);
+        font-family: 'Merienda One', cursive;
+        
+    }
+    .log-in {
+        font-family: 'Merienda One', cursive;
+    }
+    
 
