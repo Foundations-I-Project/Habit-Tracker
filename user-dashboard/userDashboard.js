@@ -17,3 +17,4 @@ habitForm.addEventListener('submit', (e) => {
 });
 
 renderHabit();
+

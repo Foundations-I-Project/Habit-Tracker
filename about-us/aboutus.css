@@ -1,7 +1,9 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Merienda One', cursive;
     background-color: aquamarine;
     font-size: larger;
+    background: url('../assets/japanese-cherry6.gif') no-repeat center fixed;     
+    background-size: cover;
   }
   
   /* Style the header */
