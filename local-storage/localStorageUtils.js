@@ -65,7 +65,7 @@ export function addHabit(habit) {
 
 export function completeHabit(message) {
     const user = getUser();
-    console.log(user.habits);
+
     const matchingHabit = user.habits.find((habit) => message === habits.habit);
 
     matchingHabit.completed = true;
