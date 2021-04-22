@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { createUser } from "./local-storage.js";
-=======
 import { loginAndRedirect, createUser, userExists } from "./local-storage/localStorageUtils.js";
->>>>>>> cb997a9aa06c9ce0826fed7957b9c4939294c08b
 
 const errorSpan = document.querySelector('#error-span');
 const button = document.querySelector('#log-in');
