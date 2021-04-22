@@ -58,6 +58,7 @@ export function addHabit(habit) {
     };
 
     const user = getUser();
+    console.log(user)
     user.habits.push(newHabit);
 
     updateUser(user);
