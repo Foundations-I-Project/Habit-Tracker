@@ -41,7 +41,7 @@ body {
     
     
     
-    header, h1, h3, a {
+    header, a {
         display: flex;
         justify-content: space-between;
         align-content: space-between;
@@ -54,5 +54,28 @@ body {
     .log-in {
         font-family: 'Merienda One', cursive;
     }
-    
+  
+    h3  {
+        padding: 35px 20px;
+        margin-right: 1rem;
+        border: 0;
+        border-radius: 8px;
+        font-size: 1.4rem;
+        background-color: rgb(230, 197, 203);
+        color: white;
+        text-transform: capitalize;
+        }
 
+    #form  {
+        padding: 35px 20px;
+        margin: 50px auto;
+        border: 0;
+        border-radius: 8px;
+        font-size: 1.4rem;
+        background-color: rgb(230, 197, 203);
+        color: white;
+        text-transform: capitalize;
+        text-align: center;
+        width: 350px;
+        }
+       
