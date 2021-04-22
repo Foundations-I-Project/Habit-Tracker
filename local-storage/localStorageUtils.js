@@ -11,14 +11,14 @@ export function createUser(username, password) {
 }
 
 export function getUser() {
-    const stringUser = localStorage.getItem(USER);
-    const user = JSON.parse(stringUser);
-    return user;
+    const stringyUser = localStorage.getItem(USER);
+    const parsedUser = JSON.parse(stringyUser);
+    return parsedUser;
 }
 
 export function updateUser(user) {
-    const stringUser = JSON.stringify(user);
-    localStorage.setItem(USER, stringUser);
+    const stringyUser = JSON.stringify(user);
+    localStorage.setItem(USER, stringyUser);
 }
 
 export function userExists(username) {
