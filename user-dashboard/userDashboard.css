@@ -6,6 +6,12 @@ body {
     
     font-family: 'Merienda One', cursive;
     background-color: teal;
+    background: url('../assets/japanese-cherry2.gif') no-repeat center fixed;     
+        background-size: cover;
+        background-color: teal;
+        
+        
+        
     }
 
     header{
@@ -15,12 +21,17 @@ body {
         margin-right:auto;
         background-color: var(--color3);
         height: var(--header-height);
-        text-align: center;
-    };
-  #top {
-        margin: auto;
-        width: 50%;
-        border: 3px solid green;
-        padding: 10px;
+        text-align:center;
       }
-  
+  .top {
+        
+        display: flex;
+        justify-content: center;
+        align-items:
+  }
+      
+
+
+  /* width:50%;
+        border: 3px solid green;
+        padding: 10px;   */
