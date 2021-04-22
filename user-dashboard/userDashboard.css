@@ -12,7 +12,16 @@ body {
         display: flex;
         justify-content: space-between;
         align-content: space-between;
-        margin-right: 1rem;
+        margin-right:auto;
         background-color: var(--color3);
         height: var(--header-height);
+        text-align: center;
     };
+  #top {
+    {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+      }
+  }
