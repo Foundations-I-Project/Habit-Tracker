@@ -16,3 +16,9 @@ body {
     th {
      align-items: space-around;      
     }
+    .rick {
+        display: flex;
+        justify-content: flex-end;
+        align-content:flex-end;
+    
+    }
