@@ -7,9 +7,12 @@ habitForm.addEventListener('submit', (e) => {
 
     const formData = new FormData(habitForm);
     const habit = formData.get('new-habit');
-    addHabit(habit);
+    const goal = Number(formData.get('new-goal'));
+    console.log(habit, goal);
+    addHabit(habit, goal);
 
-    renderLi(habit.habit);
+
+    renderLi(habit.habit, goal);
 
 
     habitForm.reset();

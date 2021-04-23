@@ -12,14 +12,17 @@ const table = document.querySelector('table');
 var ctx = document.getElementById('myChart').getContext('2d');
 
 const names = [];
-const captured = [];
+const completed = [];
+const goal = [];
 
-const resultsSecondNature = getUser();
+const userData = getUser();
 
 
-for (let activity of resultsSecondNature.habits) {
-    names.push(activity.habit);
-    captured.push(activity.completed);
+for (let habit of userData.habits) {
+
+    names.push(habit.habit);
+    completed.push(habit.completed);
+    goal.push(habit.goal);
 }
 
 
@@ -30,18 +33,18 @@ var myChart = new Chart(ctx, { // eslint-disable-line
         labels: names,
         datasets: [{
             label: 'Habits',
-            data: captured,
+            data: completed,
             backgroundColor: 'pink',
-            borderColor: 'red',
+            borderColor: 'hot pink',
             borderWidth: 3
         },
-            // {
-            //     label: 'Pokemon Encountered',
-            //     data: encountered,
-            //     backgroundColor: 'lightblue',
-            //     borderColor: 'steelblue',
-            //     borderWidth: 3
-            // }
+        {
+            label: 'Completed',
+            data: goal,
+            backgroundColor: 'lightblue',
+            borderColor: 'steelblue',
+            borderWidth: 3
+        }
         ]
     },
     options: {
@@ -53,31 +56,30 @@ var myChart = new Chart(ctx, { // eslint-disable-line
     }
 });
 
-export function renderTable() {
+function renderTable() {
     const table = document.querySelector('tbody');
-    const secondNature = getUser();
-
-    for (let i = 0; i < secondNature.length; i++) {
-        const result = secondNature[i];
+    const userData = getUser();
+    const habits = userData.habits;
+    for (let i = 0; i < habits.length; i++) {
+        const result = habits[i];
         const tr = renderLineItems(result);
         table.append(tr);
 
     }
 }
 renderTable();
-
-export function renderLineItems(resultsSecondNature) {
+function renderLineItems(userData) {
     const tr = document.createElement('tr');
-    const tdHabit = document.createElement('td');
+    const tdName = document.createElement('td');
     const tdCompleted = document.createElement('td');
     const tdGoal = document.createElement('td');
 
-    tdHabit.textContent = resultsSecondNature.id;
-    tdCompleted.textContent = resultsSecondNature.captured;
-    tdGoal.textContent = resultsSecondNature.encountered;
-    console.log(resultsSecondNature.id);
+    tdName.textContent = userData.habit;
+    tdCompleted.textContent = userData.completed;
+    tdGoal.textContent = userData.goal;
 
-    tr.append(tdHabit, tdCompleted, tdGoal);
+
+    tr.append(tdName, tdCompleted, tdGoal);
 
     return tr;
 }

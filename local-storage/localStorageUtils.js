@@ -83,10 +83,11 @@ export function loginAndRedirect(username) {
     window.location = './user-dashboard/index.html';
 }
 
-export function addHabit(habit) {
+export function addHabit(habit, goal) {
     const newHabit = {
         habit: habit,
         completed: 0,
+        goal: goal,
     };
 
     const user = getUser();
@@ -102,7 +103,7 @@ export function completeHabit(message) {
     console.log(user.habits);
     const matchingHabit = user.habits.find((habit) => message === habit);
     console.log(matchingHabit);
-    matchingHabit.completed++;
+    matchingHabit.captured++;
 
     updateUser(user);
 }
