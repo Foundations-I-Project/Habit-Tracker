@@ -4,21 +4,67 @@ body {
     font-size: larger;
     background: url('../assets/japanese-cherry6.gif') no-repeat center fixed;     
     background-size: cover;
+    color: white;
   }
   
   /* Style the header */
-  h1 {
-    background-color: #8f4242;
+  header, h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     padding: 30px;
     text-align: center;
-    font-size: 85px;
+    font-size: 80px;
+    color: white;
+    text-transform: capitalize;
   }
   
-  /* Container for flexboxes */
+  
   main {
-    display: -webkit-flex;
+    /* display: -webkit-flex; */
     display: flex;
+    color: white;
   }
+  .column {
+    float: left;
+    width: 30%;
+    padding: 5px;
+    margin-left: 27px;
+    
+  }
+
+  .row::after {
+    content: "";
+    clear: left;
+    display: table;
+  }
+
+  .kayla {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+    
+  }
+  .matt {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    height:100%;
+    width: 80%;
+
+  }
+
+  .kara {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+  }
+
   
   /* Create three equal columns that sits next to each other */
   .column {
@@ -34,4 +80,82 @@ body {
     background-color: #f1f1f1;
     padding: 10px;
     text-align: center;
+  }
+  .teamInfo {
+     /* display: flex; 
+     align-items: flex-start;  */
+    font-size: 30px;
+  }
+  p1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 55px;
+    text-shadow: 2px 5px 2px #4f075a;
+  }
+ 
+  p2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 55px;
+    text-shadow: 2px 2px #3c043c;
+  }
+  p3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+  }
+  p4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    
+    
+  }
+  p5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    
+  }
+  p6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+  }
+  p7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+  }
+
+  p8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+  }
+  .loginEnd {
+    color: rgb(232, 23, 187);
+  }
+  .dashboardEnd {
+    color: rgb(232, 23, 187);
+  }
+  
+  
+  
+  
+  
+  
+  
+  section {
+    /* display: flex;
+    align-items: center; */
+    font-size: 30px;
   }

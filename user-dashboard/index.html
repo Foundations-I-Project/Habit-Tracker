@@ -13,7 +13,9 @@
 </head>
 
 <header>
-    <a href="../about-us/index.html">About Us!</a>
+    <h2>
+        <a href="../about-us/index.html">About Us!</a>
+    </h2>
 </header>
 
 <body>
@@ -23,18 +25,15 @@
             New Habit:<br>
 
             <input class="new-habit" type="text" name="new-habit"><br>
+            <input class="new-goal" type="text" name="new-goal"><br>
         </label>
-        <ul id="HabitList"></ul>
+        <button>submit</button>
 
-        <label id="yes">
-            <input type="radio" name="radioTracker1" id="radio1">Yah Brah
-
-        </label>
-        <label id="no">
-            <input type="radio" name="radioTracker1" id="radio1">Nah Brah
-        </label>
     </form>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <ul id="HabitList"></ul>
+
+
+    <a href="../results/index.html">View Progress</a>
 </body>
 <script type="module" src="./userDashboard.js"></script>
 

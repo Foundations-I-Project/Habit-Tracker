@@ -14,9 +14,9 @@ body {
         
     }
 
-    header{
+    header h2 {
         display: flex;
-        justify-content: space-between;
+        justify-content:flex-end;
         align-content: space-between;
         margin-right:auto;
         background-color: var(--color3);
