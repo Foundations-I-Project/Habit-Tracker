@@ -32,14 +32,14 @@ var myChart = new Chart(ctx, { // eslint-disable-line
     data: {
         labels: names,
         datasets: [{
-            label: 'Habits',
+            label: 'Completed',
             data: completed,
             backgroundColor: ' rgb(238, 140, 209)',
             borderColor: ' rgb(225, 15, 162)',
             borderWidth: 3
         },
         {
-            label: 'Completed',
+            label: 'Goal',
             data: goal,
             backgroundColor: ' rgb(135, 189, 189)',
             borderColor: 'teal',
