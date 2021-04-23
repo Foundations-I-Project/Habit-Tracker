@@ -12,14 +12,17 @@ const table = document.querySelector('table');
 var ctx = document.getElementById('myChart').getContext('2d');
 
 const names = [];
-const captured = [];
+const completed = [];
+const goal = [];
 
-const resultsSecondNature = getUser();
+const resultsPokedex = getUser();
 
 
-for (let activity of resultsSecondNature.habits) {
-    names.push(activity.habit);
-    captured.push(activity.completed);
+for (let pokemon of resultsPokedex.habits) {
+
+    names.push(pokemon.habit);
+    completed.push(pokemon.completed);
+    goal.push(pokemon.goal);
 }
 
 
@@ -30,18 +33,18 @@ var myChart = new Chart(ctx, { // eslint-disable-line
         labels: names,
         datasets: [{
             label: 'Habits',
-            data: captured,
+            data: completed,
             backgroundColor: 'pink',
-            borderColor: 'red',
+            borderColor: 'hot pink',
             borderWidth: 3
         },
-            // {
-            //     label: 'Pokemon Encountered',
-            //     data: encountered,
-            //     backgroundColor: 'lightblue',
-            //     borderColor: 'steelblue',
-            //     borderWidth: 3
-            // }
+        {
+            label: 'Completed',
+            data: goal,
+            backgroundColor: 'lightblue',
+            borderColor: 'steelblue',
+            borderWidth: 3
+        }
         ]
     },
     options: {
@@ -55,10 +58,10 @@ var myChart = new Chart(ctx, { // eslint-disable-line
 
 export function renderTable() {
     const table = document.querySelector('tbody');
-    const secondNature = getUser();
+    const pokedex = getUser();
 
-    for (let i = 0; i < secondNature.length; i++) {
-        const result = secondNature[i];
+    for (let i = 0; i < pokedex.length; i++) {
+        const result = pokedex[i];
         const tr = renderLineItems(result);
         table.append(tr);
 
@@ -66,18 +69,18 @@ export function renderTable() {
 }
 renderTable();
 
-export function renderLineItems(resultsSecondNature) {
+export function renderLineItems(getUser) {
     const tr = document.createElement('tr');
-    const tdHabit = document.createElement('td');
+    const tdPokemon = document.createElement('td');
     const tdCompleted = document.createElement('td');
     const tdGoal = document.createElement('td');
 
-    tdHabit.textContent = resultsSecondNature.id;
-    tdCompleted.textContent = resultsSecondNature.captured;
-    tdGoal.textContent = resultsSecondNature.encountered;
-    console.log(resultsSecondNature.id);
+    tdPokemon.textContent = pokedex.id;
+    tdCompleted.textContent = pokedex.completed;
+    tdGoal.textContent = pokedex.goal;
 
-    tr.append(tdHabit, tdCompleted, tdGoal);
+
+    tr.append(tdPokemon, tdCompleted, tdGoal);
 
     return tr;
 }
