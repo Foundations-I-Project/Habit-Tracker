@@ -56,26 +56,25 @@ var myChart = new Chart(ctx, { // eslint-disable-line
     }
 });
 
-export function renderTable() {
+function renderTable() {
     const table = document.querySelector('tbody');
     const pokedex = getUser();
-
-    for (let i = 0; i < pokedex.length; i++) {
-        const result = pokedex[i];
+    const habits = pokedex.habits;
+    for (let i = 0; i < habits.length; i++) {
+        const result = habits[i];
         const tr = renderLineItems(result);
         table.append(tr);
 
     }
 }
 renderTable();
-
-export function renderLineItems(getUser) {
+function renderLineItems(pokedex) {
     const tr = document.createElement('tr');
     const tdPokemon = document.createElement('td');
     const tdCompleted = document.createElement('td');
     const tdGoal = document.createElement('td');
 
-    tdPokemon.textContent = pokedex.id;
+    tdPokemon.textContent = pokedex.habit;
     tdCompleted.textContent = pokedex.completed;
     tdGoal.textContent = pokedex.goal;
 
