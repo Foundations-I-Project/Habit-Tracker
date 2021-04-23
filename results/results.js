@@ -15,14 +15,14 @@ const names = [];
 const completed = [];
 const goal = [];
 
-const resultsPokedex = getUser();
+const userData = getUser();
 
 
-for (let pokemon of resultsPokedex.habits) {
+for (let habit of userData.habits) {
 
-    names.push(pokemon.habit);
-    completed.push(pokemon.completed);
-    goal.push(pokemon.goal);
+    names.push(habit.habit);
+    completed.push(habit.completed);
+    goal.push(habit.goal);
 }
 
 
@@ -58,8 +58,8 @@ var myChart = new Chart(ctx, { // eslint-disable-line
 
 function renderTable() {
     const table = document.querySelector('tbody');
-    const pokedex = getUser();
-    const habits = pokedex.habits;
+    const userData = getUser();
+    const habits = userData.habits;
     for (let i = 0; i < habits.length; i++) {
         const result = habits[i];
         const tr = renderLineItems(result);
@@ -68,18 +68,18 @@ function renderTable() {
     }
 }
 renderTable();
-function renderLineItems(pokedex) {
+function renderLineItems(userData) {
     const tr = document.createElement('tr');
-    const tdPokemon = document.createElement('td');
+    const tdName = document.createElement('td');
     const tdCompleted = document.createElement('td');
     const tdGoal = document.createElement('td');
 
-    tdPokemon.textContent = pokedex.habit;
-    tdCompleted.textContent = pokedex.completed;
-    tdGoal.textContent = pokedex.goal;
+    tdName.textContent = userData.habit;
+    tdCompleted.textContent = userData.completed;
+    tdGoal.textContent = userData.goal;
 
 
-    tr.append(tdPokemon, tdCompleted, tdGoal);
+    tr.append(tdName, tdCompleted, tdGoal);
 
     return tr;
 }
