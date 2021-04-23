@@ -10,10 +10,11 @@ habitForm.addEventListener('submit', (e) => {
     addHabit(habit);
 
     renderLi(habit.habit);
-    renderHabit();
+
 
     habitForm.reset();
-
+    renderHabit();
 });
 
 renderHabit();
+
