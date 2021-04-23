@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:;
+    
     padding: 30px;
     text-align: center;
     font-size: 80px;
@@ -26,6 +26,45 @@ body {
     display: flex;
     color: white;
   }
+  .column {
+    float: left;
+    width: 30%;
+    padding: 5px;
+    margin-left: 27px;
+    
+  }
+
+  .row::after {
+    content: "";
+    clear: left;
+    display: table;
+  }
+
+  .kayla {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+    
+  }
+  .matt {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    height:100%;
+    width: 80%;
+
+  }
+
+  .kara {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+  }
+
   
   /* Create three equal columns that sits next to each other */
   .column {
@@ -47,29 +86,30 @@ body {
      align-items: flex-start;  */
     font-size: 30px;
   }
-  p {
+  p1 {
     display: flex;
-    align-items:baseline;
+    align-content: center;
     justify-content: center;
+    font-size: 50px;
   }
  
   p2 {
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
-    font-size: 65px;
+    font-size: 40px;
   }
   p3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 65px;
+    font-size: 30px;
   }
   p4 {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 55px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 50px;
     
     
   }
