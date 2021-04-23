@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(211, 183, 211);
+    font-family: 'Merienda One', cursive;
+    font-size: 2rem;
+    color: white;
+
+    }
+
+    table, th, td {
+    text-align: center;
+
+    }
+    table {
+        background-color: rgb(250, 94, 230);
+    }
+    th {
+     align-items: space-around;      
+    }
