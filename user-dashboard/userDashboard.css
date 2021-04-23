@@ -5,6 +5,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Merienda One', cursive;
+    font-size: 3rem;
     background-color: teal;
     background: url('../assets/japanese-cherry2.gif') no-repeat center fixed;     
         background-size: cover;
@@ -22,6 +23,9 @@ body {
         background-color: var(--color3);
         height: var(--header-height);
         text-align:center;
+        font-size: 2rem;
+        text-shadow: 2px 5px 2px #4f075a;
+
       }
   .top {
         

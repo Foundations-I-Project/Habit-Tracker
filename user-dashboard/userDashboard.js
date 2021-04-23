@@ -11,7 +11,7 @@ habitForm.addEventListener('submit', (e) => {
     const goal = Number(formData.get('new-goal'));
     console.log(habit, goal);
     addHabit(habit, goal);
-    alert(habit, goal, 'whatever we want to say');
+    // alert(habit, goal, 'whatever we want to say');
 
     renderLi(habit.habit, goal);
 
