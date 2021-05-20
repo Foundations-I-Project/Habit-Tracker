@@ -1,15 +1,12 @@
-import { loginAndRedirect, createUser, userExists } from "./local-storage/localStorageUtils.js";
+import { 
+    loginAndRedirect, 
+    createUser, 
+    userExists, 
+} from './local-storage/localStorageUtils.js';
 
 const errorSpan = document.querySelector('#error-span');
-const button = document.querySelector('#log-in');
-
-//if (loginAndRedirect()) {
-//window.location = './';
-
-//}
 
 const form = document.querySelector('#form');
-// console.log(button, form);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -19,7 +16,7 @@ form.addEventListener('submit', (e) => {
     const password = formData.get('password');
 
     if (userExists(username)) {
-        if (usernamePasswordMatch(username, password)) {
+        if (usernamePasswordMatch(username, password)) { // not sure how this code could be working if this function is undefined?
             loginAndRedirect(username);
         } else {
             errorSpan.textContent = 'Wrong username or password! Thou shalt not log in';

@@ -1,31 +1,16 @@
 
 import { getUser } from '../local-storage/localStorageUtils.js';
-// import { pokeData } from '../pokemon.js';
-
-
-
-// const button = document.getElementById('pokemonHome');
 
 const table = document.querySelector('table');
 
 
 var ctx = document.getElementById('myChart').getContext('2d');
 
-const names = [];
-const completed = [];
-const goal = [];
+const names = userData.habits.map(h => h.habit);
+const completed = userData.habits.map(h => h.completed);
+const goal = userData.habits.map(h => h.goal);
 
 const userData = getUser();
-
-
-for (let habit of userData.habits) {
-
-    names.push(habit.habit);
-    completed.push(habit.completed);
-    goal.push(habit.goal);
-}
-
-
 
 var myChart = new Chart(ctx, { // eslint-disable-line
     type: 'bar',
@@ -67,7 +52,9 @@ function renderTable() {
 
     }
 }
+
 renderTable();
+
 function renderLineItems(userData) {
     const tr = document.createElement('tr');
     const tdName = document.createElement('td');
@@ -84,16 +71,4 @@ function renderLineItems(userData) {
     return tr;
 }
 
-table.append();
-
-// button.addEventListener('click', () => {
-
-//     alert('Yay, let\'s go again!');
-
-
-
-//     localStorage.clear();
-
-//     window.location.href = '../index.html';
-
-// });
+table.append(); // doesn't seem like this is doing anything?

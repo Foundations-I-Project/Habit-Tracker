@@ -1,14 +1,15 @@
-import { getAccomplishments, getAttempts } from "./local-storage/localStorageUtils";
+import { getAccomplishments, getAttempts } from './local-storage/localStorageUtils.js';
 
 export function compare() {
     let accomplishments = getAccomplishments();
     let attempts = getAttempts();
-    if (accomplishments === attempts) {
+    // seems like these are arrays, right? You can't do === on arrays--you might want to compare their lengths
+    if (accomplishments.length === attempts.length) {
         return 'Good job!';
-    } if (accomplishments < attempts) {
-        return 'you kinda low key suck';
-    }
-    if (accomplishments > attempts) {
-        return 'nerd alert';
-    }
+    } 
+    
+    return (accomplishments.length < attempts.length)
+        ? 'you kinda low key suck' 
+        : 'nerd alert';
+    
 }
