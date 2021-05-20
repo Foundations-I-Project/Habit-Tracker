@@ -1,3 +1,4 @@
+// nice constants!
 const USER = 'USER';
 const LOGGEDIN = 'LOGGED_IN';
 const ATTEMPTS = 'ATTEMPTS';
@@ -11,11 +12,8 @@ export function setAttempts(receivedAttempts) {
 export function getAttempts() {
     const storedAttempts = localStorage.getItem(ATTEMPTS);
     const receivedAttempts = JSON.parse(storedAttempts);
-    if (receivedAttempts) {
-        return receivedAttempts;
-    } else {
-        return [];
-    }
+
+    return receivedAttempts || [];
 }
 
 export function setAccomplishments(receivedAccomplishments) {
@@ -26,11 +24,7 @@ export function setAccomplishments(receivedAccomplishments) {
 export function getAccomplishments() {
     const storedAccomplishments = localStorage.getItem(ACCOMPLISHED);
     const receivedAccomplishments = JSON.parse(storedAccomplishments);
-    if (receivedAccomplishments) {
-        return receivedAccomplishments;
-    } else {
-        return [];
-    }
+    return receivedAccomplishments || [];
 }
 
 export function createUser(username, password) {
@@ -56,17 +50,16 @@ export function updateUser(user) {
 export function userExists(username) {
     const userInLocalStorage = getUser();
 
-    if (!userInLocalStorage) return false;
-
-    return username === userInLocalStorage.username;
+    return userInLocalStorage 
+        ? username === userInLocalStorage.username 
+        : false;
 }
 
 export function usernameAndPasswordMatch(username, password) {
     const userInLocalStorage = getUser();
 
-    if (!userExists(username) || userInLocalStorage.password !== password)
-        return false;
-    return true;
+    // seems like this should do the trick
+    return (userExists(username) && userInLocalStorage.password === password);
 }
 
 export function login(username) {
@@ -85,7 +78,7 @@ export function loginAndRedirect(username) {
 
 export function addHabit(habit, goal) {
     const newHabit = {
-        habit: habit,
+        habit, // if the key and value have the same variable name, you can just do this
         completed: 0,
         goal: goal,
     };
@@ -98,11 +91,8 @@ export function addHabit(habit, goal) {
 }
 
 export function completeHabit(message) {
-    console.log(message);
     const user = getUser();
-    console.log(user.habits);
     const matchingHabit = user.habits.find((habit) => message === habit);
-    console.log(matchingHabit);
     matchingHabit.captured++;
 
     updateUser(user);

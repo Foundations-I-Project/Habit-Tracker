@@ -1,4 +1,4 @@
-import { getUser, createUser } from '../local-storage/localStorageUtils.js'
+import { getUser, createUser } from '../local-storage/localStorageUtils.js';
 // import { updateUser } from '';
 // import { userExists } from '';
 // import { usernameAndPasswordMatch } from '';
@@ -7,21 +7,21 @@ import { getUser, createUser } from '../local-storage/localStorageUtils.js'
 
 const test = QUnit.test;
 const USER = 'USER';
-const LOGGEDIN = 'LOGGED_IN';
 const user = {
-    "habits": [],
-    "username": {
-        "habits": [],
-        "username": [
+    'habits': [],
+    'username': {
+        'habits': [],
+        'username': [
             {
-                "habits": [],
-                "password": "whatever",
-                "username": "hey im here"
+                'habits': [],
+                'password': 'whatever',
+                'username': 'hey im here'
             }
         ]
     }
 };
 //get USER
+// nice-looking test!
 test('are we getting the user from local', (expect) => {
     createUser(user);
     const localStorageUser = JSON.parse(localStorage.getItem(USER));

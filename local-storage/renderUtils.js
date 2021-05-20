@@ -1,48 +1,28 @@
-import { getUser, completeHabit, updateUser } from './localStorageUtils.js';
+import { getUser, updateUser } from './localStorageUtils.js';
 
-const yahNahBrahBrah = ['Yah Brah', 'Nah Brah'];
-yahNahBrahBrah.forEach((yahNahValue, i) => {
-
-})
-
-export function renderLi(habit) {
+export function renderLi(habitText) {
     const li = document.createElement('li');
-    li.textContent = habit;
+    li.textContent = habitText;
     const button = document.createElement('button');
-    button.textContent = 'Matts girly flower'
-    // li.append(button);
-    // const labelValueYah = document.createElement('label');
-    // const inputValueYah = document.createElement('input');
-    // inputValueYah.textContent = 'Yah';
-    // inputValueYah.type = "radio";
-    // inputValueYah.name = 'yahNahValue';
-    // inputValueYah.yahNahValue = 'Yah Brah';
-    // li.appendChild(labelValueYah);
-    // li.appendChild(inputValueYah);
+    button.textContent = 'Matts girly flower';
 
-    // const labelValueNah = document.createElement('label');
-    // const inputValueNah = document.createElement('input');
-    // inputValueNah.type = "radio";
-    // inputValueNah.name = 'yahNahValue';
-    // inputValueNah.yahNahValue = 'Nah Brah';
-    // li.appendChild(labelValueNah);
-    // li.appendChild(inputValueNah);
-    button.value = habit;
-    button.type = 'button'
-    console.log(habit);
+    button.value = habitText;
+    button.type = 'button';
+    console.log(habitText);
     button.addEventListener('click', () => {
         console.log(button.value);
 
         const user = getUser();
         console.log(user.habits);
-        const matchingHabit = user.habits.find((_habit) => habit === _habit.habit);
+        // nice use of array methods here! It might have been nice to make the naming more distinc here, for readability
+        const matchingHabit = user.habits.find((userHabitObject) => habitText === userHabitObject.habit);
         console.log(matchingHabit);
         matchingHabit.completed++;
 
         updateUser(user);
-        // completeHabit(button.value);
     });
     li.append(button);
+
     return li;
 
 }
@@ -52,10 +32,8 @@ export function renderHabit() {
 
     const ul = document.getElementById('HabitList');
     ul.textContent = '';
-    user.habits.forEach(habit => {
-        const li = renderLi(habit.habit);
-
-
+    user.habits.forEach(userHabitObject => {
+        const li = renderLi(userHabitObject.habit);
 
         ul.append(li);
     });
